@@ -1,6 +1,3 @@
-import 'zone.js'
-import 'reflect-metadata';
-import 'es6-shim';
 import {Component, View, bootstrap} from 'angular2/angular2';
 
 @Component({
@@ -17,11 +14,4 @@ class AppComponent {
 
 bootstrap(AppComponent);
 
-/*
-console.log('OK');
-
-// webpack --watch --progress --debug --devtool eval-source-map
-
-
-
-*/
+// webpack --watch --progress --debug
