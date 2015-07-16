@@ -7,9 +7,6 @@ module.exports = {
     devServer: {
         inline: true,
         colors: true,
-        // historyApiFallback: true,
-        // contentBase: 'src/public',
-        // publicPath: '/endpoint'
     },
     context: __dirname + '/src',
     entry: {
@@ -25,16 +22,6 @@ module.exports = {
         filename: '[name].js'
     },
     plugins: [
-        /*new webpack.optimize.CommonsChunkPlugin({
-            name: 'angular2',
-            minChunks: Infinity,
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
-            filename: 'common.js'
-        }),
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.DedupePlugin(),*/
         new webpack.NoErrorsPlugin()
     ],
     module: {
