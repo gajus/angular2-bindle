@@ -21,6 +21,7 @@ module.exports = {
         app: [
             // Required ng2 dependencies
             'es6-shim',
+            // 'zone.js/dist/long-stack-trace-zone.js',
             'zone.js',
             'reflect-metadata',
 
