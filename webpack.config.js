@@ -12,7 +12,7 @@ module.exports = {
     entry: {
         app: [
             // 'es6-shim',
-            // 'traceur-runtime',
+            'traceur-runtime',
             'zone.js',
             'reflect-metadata',
             'angular2/angular2',

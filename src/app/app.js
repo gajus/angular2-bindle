@@ -32,7 +32,9 @@ class App {
     }
 }
 
-bootstrap(App, [routerInjectables]);
+document.addEventListener('DOMContentLoaded', () => {
+    bootstrap(App, [routerInjectables]);
+});
 
 // webpack --watch --progress --debug
 // http-server -a 127.0.0.1 -p 8000
