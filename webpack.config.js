@@ -11,7 +11,8 @@ module.exports = {
     context: __dirname + '/src',
     entry: {
         app: [
-            'es6-shim',
+            // 'es6-shim',
+            'traceur-runtime',
             'zone.js',
             'reflect-metadata',
             'angular2/angular2',
