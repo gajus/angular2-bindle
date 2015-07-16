@@ -1,7 +1,8 @@
 var webpack = require('webpack');
 
 module.exports = {
-    devtool: 'source-map',
+    // devtool: 'source-map',
+    // devtool: 'eval-source-map',
     debug: true,
     devServer: {
         inline: true,
@@ -12,20 +13,10 @@ module.exports = {
     },
     context: __dirname + '/src',
     entry: {
-        /*angular2: [
-            'angular2/angular2',
-            'angular2/router',
-            'angular2/di',
-            'angular2/src/facade/browser'
-        ],*/
         app: [
-            // Required ng2 dependencies
             'es6-shim',
-            // 'zone.js/dist/long-stack-trace-zone.js',
             'zone.js',
             'reflect-metadata',
-
-            // The app itself
             './app/app'
         ]
     },
@@ -34,6 +25,16 @@ module.exports = {
         filename: '[name].js'
     },
     plugins: [
+        /*new webpack.optimize.CommonsChunkPlugin({
+            name: 'angular2',
+            minChunks: Infinity,
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            filename: 'common.js'
+        }),
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.DedupePlugin(),*/
         new webpack.NoErrorsPlugin()
     ],
     module: {
@@ -44,7 +45,9 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/
+                ],
                 loader: 'babel',
                 query: {
                     // optional: ['runtime'],

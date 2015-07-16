@@ -1,5 +1,3 @@
-console.log('typeof [].fill', typeof [].fill);
-
 import { Component, View, bootstrap } from 'angular2/angular2';
 import { routerInjectables, RouteConfig, RouterOutlet, RouterLink } from 'angular2/router';
 
