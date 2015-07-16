@@ -15,7 +15,7 @@ module.exports = {
             'traceur-runtime',
             'zone.js',
             'reflect-metadata',
-            'angular2/angular2',
+            //'angular2/angular2',
             './app/app'
         ]
     },
