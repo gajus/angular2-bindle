@@ -2,13 +2,15 @@
   "devDependencies": {
     "babel-core": "^5.6.18",
     "babel-loader": "^5.3.1",
+    "es6-shim": "^0.32.2",
     "gulp": "^3.9.0",
+    "html-loader": "^0.3.0",
     "node-libs-browser": "^0.5.2",
     "reflect-metadata": "^0.1.0",
     "webpack": "^1.10.1"
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.30",
+    "angular2": "^2.0.0-alpha.31",
     "reflect-metadata": "^0.1.0",
     "zone.js": "^0.5.2"
   }

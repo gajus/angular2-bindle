@@ -10,22 +10,37 @@ module.exports = {
         // contentBase: 'src/public',
         // publicPath: '/endpoint'
     },
-    context: __dirname + '/src/app',
-    entry: [
-        'zone.js',
-        'reflect-metadata',
-        'es6-shim',
-        './main',
-    ],
+    context: __dirname + '/src',
+    entry: {
+        /*angular2: [
+            'angular2/angular2',
+            'angular2/router',
+            'angular2/di',
+            'angular2/src/facade/browser'
+        ],*/
+        app: [
+            // Required ng2 dependencies
+            'es6-shim',
+            'zone.js',
+            'reflect-metadata',
+
+            // The app itself
+            './app/app'
+        ]
+    },
     output: {
         path: __dirname + '/endpoint/static',
-        filename: 'main.js'
+        filename: '[name].js'
     },
     plugins: [
         new webpack.NoErrorsPlugin()
     ],
     module: {
         loaders: [
+            {
+                test: /\.html$/,
+                loader: 'html'
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
