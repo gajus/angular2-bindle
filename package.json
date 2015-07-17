@@ -7,12 +7,9 @@
     "html-loader": "^0.3.0",
     "node-libs-browser": "^0.5.2",
     "reflect-metadata": "^0.1.0",
-    "traceur-runtime": "0.0.59",
     "webpack": "^1.10.1"
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.31",
-    "reflect-metadata": "^0.1.0",
-    "zone.js": "^0.5.2"
+    "angular2": "^2.0.0-alpha.31"
   }
 }
