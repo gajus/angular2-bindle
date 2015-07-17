@@ -10,7 +10,7 @@ li {
 }
 
 body {
-    font: normal 16px/24px "Helvetica Neue", Helvetica, Arial, freesans, sans-serif; color: #000;
+    font: normal 16px/24px "Helvetica Neue", Helvetica, Arial, freesans, sans-serif; background: #fff; color: #000;
 }
 
 pre,
@@ -18,6 +18,6 @@ code {
     white-space: normal;
 }
 
-main {
-    display: block; min-width: 320px; max-width: 880px; padding: 40px;
+#viewport {
+    display: block; margin: 20px;
 }

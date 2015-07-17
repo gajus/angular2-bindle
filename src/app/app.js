@@ -45,5 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ]);
 });
 
-// webpack --watch --progress --debug
+// webpack --watch --progress
+// webpack-dev-server --hot --inline
 // http-server -a 127.0.0.1 -p 8000

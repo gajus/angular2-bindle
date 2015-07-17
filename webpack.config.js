@@ -5,8 +5,15 @@ module.exports = {
     // devtool: 'eval-source-map',
     debug: true,
     devServer: {
-        inline: true,
+        contentBase: __dirname + '/src/endpoint',
         colors: true,
+        noInfo: true,
+        host: '127.0.0.1',
+        port: 8000,
+        // inline: true,
+        // hot: true,
+        // This does _not_ add the `HotModuleReplacementPlugin` like the CLI option does.
+        publicPath: '/static/',
     },
     context: __dirname + '/src',
     entry: {
@@ -17,7 +24,7 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + '/endpoint/static',
+        path: __dirname + '/src/endpoint/static',
         filename: '[name].js'
     },
     plugins: [
@@ -47,7 +54,6 @@ module.exports = {
                 ],
                 loader: 'babel',
                 query: {
-                    // optional: ['runtime'],
                     stage: 0
                 }
             }
