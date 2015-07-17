@@ -8,9 +8,13 @@ import { Green } from './components/green';
     selector: 'app'
 })
 
+// https://github.com/angular/angular/blob/master/modules/angular2/src/core/annotations_impl/view.ts
 @View({
     directives: [RouterOutlet, RouterLink],
-    template: require('./app.html')
+    template: require('./app.html'),
+    styles: [
+        require('./app.scss')
+    ]
 })
 
 @RouteConfig([

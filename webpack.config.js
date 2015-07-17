@@ -30,6 +30,14 @@ module.exports = {
                 loader: 'html'
             },
             {
+                test: /\.scss$/,
+                loaders: [
+                    'to-string',
+                    'css',
+                    'sass'
+                ]
+            },
+            {
                 test: /\.js$/,
                 exclude: [
                     /node_modules/
