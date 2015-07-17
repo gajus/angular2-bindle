@@ -1,0 +1,23 @@
+html,
+body,
+ol,
+ul,
+li,
+p { margin: 0; padding: 0; }
+
+li {
+    list-style: none;
+}
+
+body {
+    font: normal 16px/24px "Helvetica Neue", Helvetica, Arial, freesans, sans-serif; color: #000;
+}
+
+pre,
+code {
+    white-space: normal;
+}
+
+main {
+    display: block; min-width: 320px; max-width: 880px; padding: 40px;
+}

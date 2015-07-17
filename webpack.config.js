@@ -23,6 +23,9 @@ module.exports = {
     plugins: [
         new webpack.NoErrorsPlugin()
     ],
+    alias: {
+        'angular2': 'angular2/es6/dev'
+    },
     module: {
         loaders: [
             {
