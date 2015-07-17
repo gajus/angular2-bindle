@@ -1,5 +1,5 @@
-import { Component, View, bootstrap } from 'angular2/angular2';
-import { routerInjectables, RouteConfig, RouterOutlet, RouterLink } from 'angular2/router';
+import { Component, View, bootstrap, bind } from 'angular2/angular2';
+import { routerInjectables, RouteConfig, RouterOutlet, RouterLink, LocationStrategy, HashLocationStrategy } from 'angular2/router';
 
 import { Red } from './components/red';
 import { Green } from './components/green';
@@ -33,7 +33,12 @@ class App {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    bootstrap(App, [routerInjectables]);
+    bootstrap(App, [
+        routerInjectables,
+        // https://github.com/angular/angular/blob/master/modules/angular2/src/router/hash_location_strategy.ts
+        // https://github.com/angular/angular/blob/master/modules/angular2/src/router/html5_location_strategy.ts
+        bind(LocationStrategy).toClass(HashLocationStrategy)
+    ]);
 });
 
 // webpack --watch --progress --debug
