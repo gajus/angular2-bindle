@@ -28,6 +28,8 @@ module.exports = {
         filename: '[name].js'
     },
     plugins: [
+        // https://github.com/webpack/docs/wiki/optimization#deduplication
+        new webpack.optimize.DedupePlugin(),
         new webpack.NoErrorsPlugin()
     ],
     alias: {

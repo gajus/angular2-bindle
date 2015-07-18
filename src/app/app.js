@@ -1,8 +1,8 @@
 import { Component, View, bootstrap, bind } from 'angular2/angular2';
 import { routerInjectables, RouteConfig, RouterOutlet, RouterLink, LocationStrategy, HashLocationStrategy } from 'angular2/router';
 
-import { Red } from './components/red';
-import { Green } from './components/green';
+import { Red } from './components/red/red';
+import { Green } from './components/green/green';
 
 @Component({
     selector: 'app'

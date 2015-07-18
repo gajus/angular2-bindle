@@ -5,7 +5,7 @@ import { Component, View } from 'angular2/angular2';
 })
 
 @View({
-    template: '<h1>Red</h1>'
+    template: require('./red.html')
 })
 
 export class Red {
